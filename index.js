@@ -1,3 +1,4 @@
+
 const buildPalette = (colorsList) => {
   const paletteContainer = document.getElementById("palette");
   const complementaryContainer = document.getElementById("complementary");
@@ -20,7 +21,7 @@ const buildPalette = (colorsList) => {
       );
 
       // if the distance is less than 120 we ommit that color
-      if (difference < 120) {
+      if (difference < 30000) {
         continue;
       }
     }
@@ -321,6 +322,8 @@ const main = () => {
     image.src = fileReader.result;
   };
   fileReader.readAsDataURL(file);
+
+ 
 };
 
 main();
